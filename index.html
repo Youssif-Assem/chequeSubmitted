@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheques Submitted</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="./main.js"></script>
+    <script src="https://kit.fontawesome.com/3936bbff8e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section id="main-container">
+        <section id="body-container">
+            <header>submit cheques</header>
+            <section class="page page-1">
+                <div class="case-title">
+                    <h2>case number : 3952 </h2>
+                    <h2>Branch Name : Nasr City</h2>
+                </div>
+                <header>
+                    <h1>customer information</h1>
+                </header>
+                <section class="body">
+                    <table>
+                        <tr>
+                            <th>Customer Name</th>
+                            <th>CIF</th>
+                            <th>Address</th>
+                            <th>Segment</th>
+                            <th>Type</th>
+                            <th>Is Borrower</th>
+                        </tr>
+                        <tr>
+                            <td>Mahmoud Dardir</td>
+                            <td>32467</td>
+                            <td>El Rehab </td>
+                            <td>VIP</td>
+                            <td>Retail</td>
+                            <td>YES</td>
+                        </tr>
+                    </table>
+                </section>
+                <header>
+                    <h1>Documents</h1>
+                </header>
+                <section class="body">
+                    <table id="document">
+                        <tr>
+                            <th>Document Name</th>
+                            <th>Scanning Date</th>
+                            <th>Branch Name</th>
+                            <th>Accept Document</th>
+                            <th>Comment</th>
+                        </tr>
+                        <tr>
+                            <td>Chq_213_front.jpg</td>
+                            <td>11 - 09 - 2021</td>
+                            <td>Nasr City</td>
+                            <td>
+                                <button class="accept">
+                                    <i class="fa-solid fa-x"></i>
+                                </button>
+                            </td>
+                            <td>
+                                <div contenteditable="true">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Chq_213_back.jpg</td>
+                            <td>11 - 09 - 2021</td>
+                            <td>Nasr City</td>
+                            <td>
+                                <button class="accept">
+                                    <i class="fa-solid fa-x"></i>
+                                </button>
+                            </td>
+                            <td>
+                                <div contenteditable="true">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ID_213_frong.jpg</td>
+                            <td>11 - 09 - 2021</td>
+                            <td>Nasr City</td>
+                            <td>
+                                <button class="accept">
+                                    <i class="fa-solid fa-x"></i>
+                                </button>
+                            </td>
+                            <td>
+                                <div contenteditable="true">
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ID_213_back.jpg</td>
+                            <td>11 - 09 - 2021</td>
+                            <td>Nasr City</td>
+                            <td>
+                                <button class="accept">
+                                    <i class="fa-solid fa-x"></i>
+                                </button>
+                            </td>
+                            <td>
+                                <div contenteditable="true">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+
+            </section>
+
+            <section class="page page-2 ">
+                <div class="case-title">
+                    <h2>case number : 3952 </h2>
+                    <button><i class="fa-solid fa-plus"></i>Add Check</button>
+                </div>
+                <section class="cheque-card">
+                    <div>
+                        <header>
+                            <h1>Cheque Number</h1>
+                        </header>
+                        <button>
+                            <i class="fa-solid fa-minus"></i>
+                        </button>
+                    </div>
+                    <div class="check-card-body">
+                        <header>
+                            <h1>Cheque Documents Assignment</h1>
+                        </header>
+                        <section>
+                            <table>
+                                <tr>
+                                    <th></th>
+                                    <th>File Type</th>
+                                    <th>Assign To</th>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                    <td>
+                                        Front CCITT Image
+                                    </td>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </section>
+                    </div>
+                </section>
+
+            </section>
+
+            <footer>
+                <div>
+                    <button><i class="fa-solid fa-chevron-left"></i> Previous </button>
+                    <button>Next<i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </footer>
+        </section>
+        <section id="side-container">
+            <img src="./media/bvs.png" id="logo" />
+            <div class="side-background"></div>
+            <div class="dark-screen"></div>
+
+            <section id="process-list">
+                <p class="process-item active">Check Documents</p>
+                <div class="horizontal-line"></div>
+                <p class="process-item">Fill cheque Data</p>
+                <div class="horizontal-line"></div>
+                <p class="process-item">Processing</p>
+                <div class="horizontal-line"></div>
+                <p class="process-item">Decision</p>
+            </section>
+        </section>
+    </section>
+</body>
+
+</html>

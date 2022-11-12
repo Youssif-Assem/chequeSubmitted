@@ -1,0 +1,307 @@
+@font-face {
+    font-family: main2;
+    src: url(./media/Cormorant-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: main;
+    src: url(./media/Ubuntu-Regular.ttf);
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    z-index: 100;
+
+}
+
+html {
+    overflow-x: hidden;
+}
+
+html,
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 62.5%;
+
+}
+
+.hidden{
+    display: none;
+}
+
+#main-container {
+    display: flex;
+}
+
+#side-container {
+    width: 30vw;
+    height: 100vh;
+    position: fixed;
+    right: 0;
+}
+
+.side-background {
+    width: 100%;
+    height: 100vh;
+    background-image: url("./media/chequesBg.jpg");
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    filter: blur(1px);
+}
+
+.dark-screen {
+    background-color: rgba(0, 0, 0, 0.76);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 5;
+}
+
+#logo {
+    z-index: 100;
+    width: 100px;
+    position: fixed;
+    bottom: 0%;
+    right: -10px;
+    scale: 0.5;
+    z-index: 10;
+}
+
+#process-list {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.process-item {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin: 15px 0px;
+    font-family: main2;
+    color: #cab08c;
+}
+
+.process-item.active {
+    color: #fafafa;
+}
+
+.horizontal-line {
+    width: 1px;
+    height: 4vh;
+    background-color: #cab08c;
+}
+
+#body-container {
+    width: 68vw;
+    min-height: 100vh;
+    z-index: 2;
+    padding: 10px 20px;
+}
+
+header {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: main2;
+    font-weight: 900;
+    color: #005377;
+}
+
+.page {
+    padding: 10px 25px;
+}
+
+.page header h1 {
+    font-size: 1.9rem;
+    width: fit-content;
+    font-weight: 600;
+    margin: 20px 0px 13px 0px;
+}
+
+.page .case-title {
+    margin-left: 8;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-left: 65%;
+}
+
+.page .case-title button{
+    border: none;
+    border-bottom: 1px solid #005377;
+    background-color: white;
+    padding: 10px 0px;
+    color:#005377;
+    font-family: main;
+    width: 120px;
+    
+}
+
+.page .case-title h2,
+.page .case-title button {
+    font-size: 1.6rem;
+    width: fit-content;
+    display: inline-block;
+    font-family: main2;
+    color: #141414;
+    text-transform: capitalize;
+}
+
+
+.page .body {
+    margin: 20px 0px;
+}
+
+.page .body table {
+    width: 100%;
+}
+
+.page .body table th {
+    font-size: 1.5rem;
+    font-family: main;
+    color: #141414;
+    padding: 0px 15px 15px;
+    border-right: 1px solid #cab08c;
+    border-bottom: 1px solid #cab08c;
+}
+
+.page .body table td {
+    font-size: 1.4rem;
+    font-family: main;
+    color: #141414;
+    text-align: center;
+    padding: 15px;
+    border-right: 1px solid #cab08c;
+}
+
+.page .body #document td button {
+    font-size: 1.4rem;
+    font-family: main;
+    color: #9eabb8;
+    text-align: center;
+    border: 2px solid #9eabb8;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 2.5em;
+    height: 2.5em;
+
+}
+
+.page .body #document td button:hover {
+    color: #005377;
+    border: 2px solid #005377;
+
+}
+
+.page .body #document td button.checked {
+    color: #08b94c;
+    border: 2px solid #08b94c;
+}
+
+.page .body #document td:first-child {
+    color: #005377;
+    text-decoration: underline;
+}
+
+.page .body #document th,
+.page .body #document td {
+    border-bottom: 1px solid #cab08c;
+}
+
+.page .body table th:last-child,
+.page .body table td:last-child {
+
+    border-right: none;
+}
+
+.page .body #document tr:last-child td {
+    border-bottom: none;
+}
+
+.page .body #document th:last-child {
+    width: 35%;
+}
+
+.page .body #document td div {
+    max-width: 20vw;
+    height: 100%;
+    overflow-wrap: break-word;
+    overflow: auto;
+    /* word-wrap: break-all; */
+}
+
+footer {
+    display: flex;
+    justify-content: end;
+}
+
+footer div {
+    width: 40%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.page .case-title button,
+footer div button {
+    border: none;
+    border-bottom: 1px solid #005377;
+    background-color: white;
+    padding: 10px 0px;
+    font-size: 1.6rem;
+    color:#005377;
+    font-family: main;
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.cheque-card{
+    border: 1px solid #005377;
+    margin-top: 20px;
+}
+.cheque-card div:first-child{
+    border-bottom: 1px solid #005377;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0px 0px 20px;
+}
+
+
+.cheque-card div:first-child header h1{
+    font-size: 1.9rem;
+    width: fit-content;
+    font-weight: 600;
+    padding: 0px
+}
+
+.cheque-card div:first-child button{
+    background-color: #fff;
+    font-size: 1.9rem;
+    padding: 10px 15px;
+    border: none;
+    border-left: 1px solid #005377;
+    color: #d62607;
+    
+}
+
+.check-card-body{
+    padding: 0px 10px;
+}
+
+.check-card-body header h1{
+    font-size: 1.7rem;
+    width: fit-content;
+    font-weight: 600;
+    padding-left: 20px;
+    font-family: main2;
+}
