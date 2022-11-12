@@ -44,13 +44,16 @@ window.addEventListener("load", () => {
     let pages = document.getElementsByClassName("page")
     let previousBtn = document.getElementById("previousBtn")
     let nextBtn = document.getElementById("nextBtn")
+    let navItems = document.getElementsByClassName("process-item")
     let pageNo = 1
     console.log(pages[0])
     previousBtn.addEventListener("click",(e)=>{
         console.log("fuck")
         if(pageNo != 1){
             pages[pageNo-1].classList.add("hidden")
+            navItems[pageNo-1].classList.remove("active")
             pageNo--;
+            navItems[pageNo-1].classList.add("active")
             pages[pageNo-1].classList.remove("hidden")
             if (nextBtn.classList.contains("disabled")) {
                 nextBtn.classList.remove("disabled")
@@ -68,7 +71,9 @@ window.addEventListener("load", () => {
         if(pageNo < pages.length){
             
             pages[pageNo-1].classList.add("hidden")
+            navItems[pageNo-1].classList.remove("active")
             pageNo++;
+            navItems[pageNo-1].classList.add("active")
             pages[pageNo-1].classList.remove("hidden")
             if (previousBtn.classList.contains("disabled")) {
                 previousBtn.classList.remove("disabled")
