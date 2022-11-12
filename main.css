@@ -28,9 +28,14 @@ body {
 
 }
 
-.hidden{
+.hidden {
     display: none;
 }
+
+.disabled{
+    color: #9eabb8;
+    border-bottom-color:#9eabb8 ;
+} 
 
 #main-container {
     display: flex;
@@ -133,16 +138,17 @@ header {
     padding-left: 65%;
 }
 
-.page .case-title button{
+.page .case-title button {
     border: none;
     border-bottom: 1px solid #005377;
     background-color: white;
     padding: 10px 0px;
-    color:#005377;
+    color: #005377;
     font-family: main;
     width: 120px;
-    
+
 }
+
 
 .page .case-title h2,
 .page .case-title button {
@@ -215,8 +221,8 @@ header {
     border-bottom: 1px solid #cab08c;
 }
 
-.page .body table th:last-child,
-.page .body table td:last-child {
+.page table th:last-child,
+.page table td:last-child {
 
     border-right: none;
 }
@@ -229,11 +235,12 @@ header {
     width: 35%;
 }
 
-.page .body #document td div {
+.page td div[contenteditable="true"]{
     max-width: 20vw;
     height: 100%;
     overflow-wrap: break-word;
     overflow: auto;
+    border:none
     /* word-wrap: break-all; */
 }
 
@@ -256,7 +263,7 @@ footer div button {
     background-color: white;
     padding: 10px 0px;
     font-size: 1.6rem;
-    color:#005377;
+    color: #005377;
     font-family: main;
     width: 100px;
     display: flex;
@@ -264,11 +271,13 @@ footer div button {
 
 }
 
-.cheque-card{
+.cheque-card {
     border: 1px solid #005377;
     margin-top: 20px;
 }
-.cheque-card div:first-child{
+
+
+.cheque-card div:first-child {
     border-bottom: 1px solid #005377;
     display: flex;
     justify-content: space-between;
@@ -276,32 +285,125 @@ footer div button {
     padding: 0px 0px 0px 20px;
 }
 
+.cheque-card header {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
 
-.cheque-card div:first-child header h1{
+.cheque-card header input {
+    font-size: 1.9rem;
+    border: 1px solid #005377;
+}
+
+.cheque-card div:first-child header h1 {
     font-size: 1.9rem;
     width: fit-content;
     font-weight: 600;
     padding: 0px
 }
 
-.cheque-card div:first-child button{
+.cheque-card div:first-child button {
     background-color: #fff;
     font-size: 1.9rem;
     padding: 10px 15px;
     border: none;
     border-left: 1px solid #005377;
     color: #d62607;
-    
+
 }
 
-.check-card-body{
+.cheque-card-body {
     padding: 0px 10px;
 }
 
-.check-card-body header h1{
+.cheque-card-body header h1 {
     font-size: 1.7rem;
     width: fit-content;
     font-weight: 600;
     padding-left: 20px;
     font-family: main2;
+}
+
+.cheque-card-body header{
+    display: block;
+}
+
+.cheque-card-body section table {
+    width: 90%;
+    margin: 0px auto;
+
+}
+
+.cheque-card-body section table th {
+    font-size: 1.5rem;
+    font-family: main;
+    color: #141414;
+    padding: 0px 15px 15px;
+    border-right: 1px solid #cab08c;
+    border-bottom: 1px solid #cab08c;
+
+}
+
+.cheque-card-body section table td {
+    font-size: 1.4rem;
+    font-family: main;
+    color: #141414;
+    text-align: center;
+    padding: 15px;
+    border-right: 1px solid #cab08c;
+    border-bottom: 1px solid #cab08c;
+
+}
+
+.cheque-card-body section table tr:last-child td{
+    border-bottom:none ;
+}
+
+select{
+    font-size: 1.4rem;
+    background-color: white;
+    border: none;
+    border-bottom:1px solid #005377;
+    padding: 15px 0px;
+}
+
+.page section.page-2 div.case-title:nth-child(2){
+    justify-content: space-between;
+}
+
+#supporting-document table{
+    border: none;
+    font-size: 1.5rem;
+    padding: 0%;
+    width: 90%;
+    margin: auto;
+}
+#supporting-document table tr:first-child{
+    font-weight: bold;
+
+}
+#supporting-document table tr:first-child td:last-child{
+    text-align: right;
+}
+
+#supporting-document table td{
+    border: none;
+    text-align: left;
+}
+
+#supporting-document table td div[contenteditable="true"]{
+    border: 1px solid #005377;
+    height: 3.5rem;
+}
+#supporting-document table td:first-child{
+    width: 40%;
+} 
+
+#supporting-document table button{
+    border: none;
+    background-color: #005377;
+    color: white;
+    padding: 5px 15px;
 }

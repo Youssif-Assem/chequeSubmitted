@@ -84,7 +84,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>ID_213_frong.jpg</td>
+                            <td>ID_213_front.jpg</td>
                             <td>11 - 09 - 2021</td>
                             <td>Nasr City</td>
                             <td>
@@ -116,8 +116,8 @@
 
             </section>
 
-            <section class="page page-2 ">
-                <div class="case-title">
+            <section class="page page-2 hidden">
+                <div class="case-title" style="justify-content: space-between;">
                     <h2>case number : 3952 </h2>
                     <button><i class="fa-solid fa-plus"></i>Add Check</button>
                 </div>
@@ -125,12 +125,13 @@
                     <div>
                         <header>
                             <h1>Cheque Number</h1>
+                            <input type="text" />
                         </header>
                         <button>
                             <i class="fa-solid fa-minus"></i>
                         </button>
                     </div>
-                    <div class="check-card-body">
+                    <div class="cheque-card-body">
                         <header>
                             <h1>Cheque Documents Assignment</h1>
                         </header>
@@ -148,10 +149,99 @@
                                     <td>
                                         Front CCITT Image
                                     </td>
-                                    <td></td>
+                                    <td>
+                                        <select name="document" id="document">
+                                            <option value="">Choose Document</option>
+                                            <option value="">Chq_121_Front</option>
+                                            <option value="">Chq_121_Back</option>
+                                            <option value="">Chq_157_Front</option>
+                                            <option value="">Chq_157_Back</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                    <td>
+                                        Back CCITT Image
+                                    </td>
+                                    <td>
+                                        <select name="document" id="document">
+                                            <option value="">Choose Document</option>
+                                            <option value="">Chq_121_Front</option>
+                                            <option value="">Chq_121_Back</option>
+                                            <option value="">Chq_157_Front</option>
+                                            <option value="">Chq_157_Back</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                    <td>
+                                        Front JPEG Image
+                                    </td>
+                                    <td>
+                                        <select name="document" id="document">
+                                            <option value="">Choose Document</option>
+                                            <option value="">Chq_121_Front</option>
+                                            <option value="">Chq_121_Back</option>
+                                            <option value="">Chq_157_Front</option>
+                                            <option value="">Chq_157_Back</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type="checkbox">
+                                    </td>
+                                    <td>
+                                        Back JPEG Image
+                                    </td>
+                                    <td>
+                                        <select name="document" id="document">
+                                            <option value="">Choose Document</option>
+                                            <option value="">Chq_121_Front</option>
+                                            <option value="">Chq_121_Back</option>
+                                            <option value="">Chq_157_Front</option>
+                                            <option value="">Chq_157_Back</option>
+                                        </select>
+                                    </td>
                                 </tr>
                             </table>
                         </section>
+                        <header>
+                            <h1>Supporting Documents</h1>
+                        </header>
+                        <section id="supporting-document">
+                            <table>
+                                    <tr>
+                                        <td>Document Name</td>
+                                        <td>Assign To</td>
+                                        <td><button>Add Documment</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+                                        
+                                        <td><select name="document" id="document">
+                                            <option value="">Choose Document</option>
+                                            <option value="">Chq_121_Front</option>
+                                            <option value="">Chq_121_Back</option>
+                                            <option value="">Chq_157_Front</option>
+                                            <option value="">Chq_157_Back</option>
+                                        </select></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                                
+                        </section>
+                        <header>
+                            <h1>Cheque Details</h1>
+                        </header>
                     </div>
                 </section>
 
@@ -159,8 +249,8 @@
 
             <footer>
                 <div>
-                    <button><i class="fa-solid fa-chevron-left"></i> Previous </button>
-                    <button>Next<i class="fa-solid fa-chevron-right"></i></button>
+                    <button id="previousBtn" class="disabled"><i class="fa-solid fa-chevron-left"></i> Previous </button>
+                    <button id="nextBtn">Next<i class="fa-solid fa-chevron-right"></i></button>
                 </div>
             </footer>
         </section>
