@@ -87,4 +87,11 @@ window.addEventListener("load", () => {
         }
         
     })
+
+
+    let UVCheck = document.getElementById("UVCheck")
+    let UVList = document.getElementById("UVList")
+    UVCheck.addEventListener("click",()=>{
+        UVList.disabled = !UVList.disabled 
+    })
 })
