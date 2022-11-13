@@ -1,11 +1,11 @@
 @font-face {
     font-family: main2;
-    src: url(./media/Cormorant-VariableFont_wght.ttf);
+    src: url(./media/Ubuntu-Medium.ttf);
 }
 
 @font-face {
     font-family: main;
-    src: url(./media/Ubuntu-Regular.ttf);
+    src: url(./media/Montserrat-VariableFont_wght.ttf);
 }
 
 * {
@@ -20,22 +20,55 @@ html {
     overflow-x: hidden;
 }
 
+:root {
+    --blue: #1e90ff;
+    --light: #f8f9fa;
+    --dark:#343a40;
+    --light-gray:#b1c0cb;
+    --shadow-gray:#33333344;
+    --white:#fff;
+    --bvs-bule:#015276;
+
+
+}
+
+
 html,
 body {
     width: 100vw;
     height: 100vh;
     font-size: 62.5%;
-
+    background-color: var(--light);
+    color:var(--dark)
 }
 
 .hidden {
     display: none;
 }
 
-.disabled{
+
+
+.disabled {
     color: #9eabb8;
-    border-bottom-color:#9eabb8 ;
-} 
+    border-bottom-color: #9eabb8;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--white);
+    border-bottom: 1px solid var(--light-gray);
+    color: var(--bvs-bule)
+}
+
+nav header{
+    margin-left:20px ;
+}
+
+table{
+    border-spacing:0
+}
 
 #main-container {
     display: flex;
@@ -51,7 +84,7 @@ body {
 .side-background {
     width: 100%;
     height: 100vh;
-    background-image: url("./media/chequesBg.jpg");
+    background-image: url("./media/bg1.jpg");
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -60,7 +93,7 @@ body {
 }
 
 .dark-screen {
-    background-color: rgba(0, 0, 0, 0.76);
+    background-color: rgba(145, 145, 145, 0.068);
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -87,28 +120,41 @@ body {
 }
 
 .process-item {
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-weight: 900;
     text-transform: uppercase;
     margin: 15px 0px;
     font-family: main2;
-    color: #cab08c;
+    color: var( --light-gray);
+    text-shadow: 0px 0px 2px var(--light-gray);
 }
 
 .process-item.active {
-    color: #fafafa;
+    color: var(--light);
 }
 
 .horizontal-line {
     width: 1px;
     height: 4vh;
-    background-color: #cab08c;
+    background-color: var( --light-gray);
+}
+
+
+#inner-main-container{
+    width: 100%;
+    height: 100%;
+    background-image: url(./media/dots.png);
+    box-shadow: inset 0 0 30px var(--shadow-gray);
+
 }
 
 #body-container {
-    width: 68vw;
+    width: 69vw;
     min-height: 100vh;
     z-index: 2;
-    padding: 10px 20px;
+    padding: 0px 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -120,7 +166,11 @@ header {
 }
 
 .page {
-    padding: 10px 25px;
+    padding: 10px 0px;
+    width: 90%;
+    margin: 5% auto;
+    padding: 2%;
+    background-color: var(--white);
 }
 
 .page header h1 {
@@ -133,9 +183,15 @@ header {
 .page .case-title {
     margin-left: 8;
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
+    align-items: flex-end;
     padding-left: 65%;
+}
+
+.page.page-1 .case-title {
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .page .case-title button {
@@ -145,8 +201,7 @@ header {
     padding: 10px 0px;
     color: #005377;
     font-family: main;
-    width: 120px;
-
+    width: fit-content !important
 }
 
 
@@ -156,7 +211,7 @@ header {
     width: fit-content;
     display: inline-block;
     font-family: main2;
-    color: #141414;
+    color: var(--dark);
     text-transform: capitalize;
 }
 
@@ -172,19 +227,19 @@ header {
 .page .body table th {
     font-size: 1.5rem;
     font-family: main;
-    color: #141414;
+    color: var(--dark);
     padding: 0px 15px 15px;
-    border-right: 1px solid #cab08c;
-    border-bottom: 1px solid #cab08c;
+    border-right: 1px solid var( --light-gray);
+    border-bottom: 1px solid var( --light-gray);
 }
 
 .page .body table td {
     font-size: 1.4rem;
     font-family: main;
-    color: #141414;
+    color: var(--dark);
     text-align: center;
     padding: 15px;
-    border-right: 1px solid #cab08c;
+    border-right: 1px solid var( --light-gray);
 }
 
 .page .body #document td button {
@@ -218,7 +273,7 @@ header {
 
 .page .body #document th,
 .page .body #document td {
-    border-bottom: 1px solid #cab08c;
+    border-bottom: 1px solid var( --light-gray);
 }
 
 .page table th:last-child,
@@ -235,13 +290,13 @@ header {
     width: 35%;
 }
 
-.page td div[contenteditable="true"]{
+.page td div[contenteditable="true"] {
     max-width: 20vw;
     height: 100%;
     overflow-wrap: break-word;
     overflow: auto;
-    border:none
-    /* word-wrap: break-all; */
+    border: none
+        /* word-wrap: break-all; */
 }
 
 footer {
@@ -254,6 +309,10 @@ footer div {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+}
+
+footer div button{
+    background-color: none;
 }
 
 .page .case-title button,
@@ -326,7 +385,7 @@ footer div button {
     font-family: main2;
 }
 
-.cheque-card-body header{
+.cheque-card-body header {
     display: block;
 }
 
@@ -339,69 +398,72 @@ footer div button {
 .cheque-card-body section table th {
     font-size: 1.5rem;
     font-family: main;
-    color: #141414;
+    color: var(--dark);
     padding: 0px 15px 15px;
-    border-right: 1px solid #cab08c;
-    border-bottom: 1px solid #cab08c;
+    border-right: 1px solid var( --light-gray);
+    border-bottom: 1px solid var( --light-gray);
 
 }
 
 .cheque-card-body section table td {
     font-size: 1.4rem;
     font-family: main;
-    color: #141414;
+    color: var(--dark);
     text-align: center;
     padding: 15px;
-    border-right: 1px solid #cab08c;
-    border-bottom: 1px solid #cab08c;
+    border-right: 1px solid var( --light-gray);
+    border-bottom: 1px solid var( --light-gray);
 
 }
 
-.cheque-card-body section table tr:last-child td{
-    border-bottom:none ;
+.cheque-card-body section table tr:last-child td {
+    border-bottom: none;
 }
 
-select{
+select {
     font-size: 1.4rem;
     background-color: white;
     border: none;
-    border-bottom:1px solid #005377;
+    border-bottom: 1px solid #005377;
     padding: 15px 0px;
 }
 
-.page section.page-2 div.case-title:nth-child(2){
+.page section.page-2 div.case-title:nth-child(2) {
     justify-content: space-between;
 }
 
-#supporting-document table{
+#supporting-document table {
     border: none;
     font-size: 1.5rem;
     padding: 0%;
     width: 90%;
     margin: auto;
 }
-#supporting-document table tr:first-child{
+
+#supporting-document table tr:first-child {
     font-weight: bold;
 
 }
-#supporting-document table tr:first-child td:last-child{
+
+#supporting-document table tr:first-child td:last-child {
     text-align: right;
 }
 
-#supporting-document table td{
+#supporting-document table td {
     border: none;
     text-align: left;
 }
 
-#supporting-document table td div[contenteditable="true"]{
+#supporting-document table td div[contenteditable="true"] {
     border: 1px solid #005377;
     height: 3.5rem;
 }
-#supporting-document table td:first-child{
-    width: 40%;
-} 
 
-#supporting-document table button{
+#supporting-document table td:first-child {
+    width: 40%;
+}
+
+#supporting-document table button {
     border: none;
     background-color: #005377;
     color: white;
