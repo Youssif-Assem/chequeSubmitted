@@ -7,7 +7,7 @@ window.addEventListener("load", () => {
         })
     })
     
-
+  //DH ALGOZ2 BTA3 AL LOOPING BTA3 AL ACCEPT ALY FE AWL PAGE BY4OF MEN M3MOLO CHECK MEN L2
     let acceptCol = document.querySelectorAll(".page .body #document tr td:nth-child(4)")
     let acceptColBtn = document.querySelectorAll(".page .body #document tr button")
     acceptColBtn.forEach((acceptBtn) => {
@@ -24,6 +24,7 @@ window.addEventListener("load", () => {
 
         })
     })
+    //DH ALGOZ2 ALTANY BTA3 BY4OF MEN AT3MLO CLICK W MEN L2
     acceptCol.forEach((acceptBtn, i) => {
         acceptBtn.addEventListener("click", (e) => {
             acceptColBtn[i].click()
@@ -40,10 +41,13 @@ window.addEventListener("load", () => {
     })
 
 
-
+    //DE ALSAF7AT hena b3d kol class de page rkm kam
     let pages = document.getElementsByClassName("page")
+    //DE BT3ML CALL LL SAF7AT ALY 2BLHA
     let previousBtn = document.getElementById("previousBtn")
+    //DE ALMFROD T3ML CALL LL NEXT PAGE
     let nextBtn = document.getElementById("nextBtn")
+    //DH AL ITEMS ALY 3ALA AL4MAL B4OF MEN FEHOM FEN W HNNDH 3ALA MEN LAMA Y3ML NEXT AW PREVIOUS
     let navItems = document.getElementsByClassName("process-item")
     let pageNo = 1
     console.log(pages[0])
@@ -61,12 +65,14 @@ window.addEventListener("load", () => {
             if(pageNo == 1){
                 previousBtn.classList.add("disabled")
             }
+          
             else if (previousBtn.classList.contains("disabled")) {
                 previousBtn.classList.remove("disabled")
             }
             
         }
     })
+    //DE ALY BT3ML MOVING BEN AL SCREENS
     nextBtn.addEventListener("click",(e)=>{
         if(pageNo < pages.length){
             
@@ -87,7 +93,7 @@ window.addEventListener("load", () => {
         }
         
     })
-
+  
 
     let UVCheck = document.getElementById("UVCheck")
     let UVList = document.getElementById("UVList")
