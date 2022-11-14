@@ -6,9 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cheques Submitted</title>
+    <script src="https://kit.fontawesome.com/3936bbff8e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+        integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="main.css">
     <script src="./main.js"></script>
-    <script src="https://kit.fontawesome.com/3936bbff8e.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -19,6 +28,9 @@
                 <header>submit cheques</header>
             </nav>
             <div id="inner-main-container">
+
+
+                <!--Page 1-->
                 <section class="page page-1">
                     <div class="case-title">
                         <h2><b>case number :</b> 3952 </h2>
@@ -117,16 +129,17 @@
                             </tr>
                         </table>
                     </section>
-    
                 </section>
-    
+
+
+                <!--Page 2-->
                 <section class="page page-2 hidden">
                     <div class="case-title" style="justify-content: space-between;">
                         <h2>case number : 3952 </h2>
                         <button><i class="fa-solid fa-plus"></i>Add Check</button>
                     </div>
                     <section class="cheque-card">
-                        <div>
+                        <div class="cheque-card-header">
                             <header>
                                 <h1>Cheque Number</h1>
                                 <input type="text" />
@@ -220,7 +233,7 @@
                                 <h1>Supporting Documents</h1>
                             </header>
                             <section id="supporting-document">
-                                <table>
+                                <table class="display-table display-table1">
                                     <tr>
                                         <td>Document Name</td>
                                         <td>Assign To</td>
@@ -230,7 +243,7 @@
                                         <td>
                                             <div contenteditable="true"></div>
                                         </td>
-    
+
                                         <td><select name="document" id="document">
                                                 <option value="">Choose Document</option>
                                                 <option value="">Chq_121_Front</option>
@@ -241,16 +254,138 @@
                                         <td></td>
                                     </tr>
                                 </table>
-    
+
                             </section>
                             <header>
                                 <h1>Cheque Details</h1>
                             </header>
+                            <section id="supporting-document">
+                                <table class="display-table display-table2">
+                                    <tr>
+                                        <td>Payer Bank</td>
+                                        <td>Payer Account Number</td>
+                                        <td>Payer Bank Branch Code</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Beneficiary Account</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+
+                                        <td><select name="document" id="document">
+                                                <option value="">Choose Document</option>
+                                                <option value="">Chq_121_Front</option>
+                                                <option value="">Chq_121_Back</option>
+                                                <option value="">Chq_157_Front</option>
+                                                <option value="">Chq_157_Back</option>
+                                            </select></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>MCR</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+
+                                        <td><select name="document" id="document">
+                                                <option value="">Choose Document</option>
+                                                <option value="">Chq_121_Front</option>
+                                                <option value="">Chq_121_Back</option>
+                                                <option value="">Chq_157_Front</option>
+                                                <option value="">Chq_157_Back</option>
+                                            </select></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Currency</td>
+                                        <td>Amount</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+
+                                        <td><select name="document" id="document">
+                                                <option value="">Choose Document</option>
+                                                <option value="">Chq_121_Front</option>
+                                                <option value="">Chq_121_Back</option>
+                                                <option value="">Chq_157_Front</option>
+                                                <option value="">Chq_157_Back</option>
+                                            </select></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bank Endorcement Date</td>
+                                        <td>Bank Branch</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+
+                                        <td><select name="document" id="document">
+                                                <option value="">Choose Document</option>
+                                                <option value="">Chq_121_Front</option>
+                                                <option value="">Chq_121_Back</option>
+                                                <option value="">Chq_157_Front</option>
+                                                <option value="">Chq_157_Back</option>
+                                            </select></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Endorcement To</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div contenteditable="true"></div>
+                                        </td>
+
+                                        <td><select name="document" id="document">
+                                                <option value="">Choose Document</option>
+                                                <option value="">Chq_121_Front</option>
+                                                <option value="">Chq_121_Back</option>
+                                                <option value="">Chq_157_Front</option>
+                                                <option value="">Chq_157_Back</option>
+                                            </select></td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+
+                            </section>
                         </div>
                     </section>
-    
                 </section>
-    
+
+
+                <!--Page 3-->
+                <section class="page page-3 hidden">
+
+                </section>
+
             </div>
             <footer>
                 <div>
